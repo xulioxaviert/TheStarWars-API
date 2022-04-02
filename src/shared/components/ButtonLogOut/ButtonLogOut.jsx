@@ -12,5 +12,9 @@ export const ButtonLogout = () => {
     setJwt(null);
     navigate("/login");
   };
-  return <button onClick={logOut}>Log Out</button>;
+  return (
+    <button className="buttonOut" onClick={logOut}>
+      Log Out
+    </button>
+  );
 };

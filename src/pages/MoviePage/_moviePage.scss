@@ -1,0 +1,27 @@
+.container-movies {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+
+
+
+    .movie-card {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 420px;
+        background-color: #f39c12;
+        margin: 10px;
+        border-radius: 20px;
+
+        img {
+            padding: 10px;
+            object-fit: cover;
+            width: 350px;
+            height: 350px;
+
+        }
+
+    }
+}

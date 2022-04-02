@@ -22,8 +22,8 @@ export const MoviePage = () => {
                 <div className="movie-card" key={movie.id}>
                   <Link to={`/movies/${movie.name}`}>
                     <img src={movie.poster} alt={movie.name} />
-                    <p> {movie.name}</p>
                   </Link>
+                  <p> {movie.name}</p>
                 </div>
               );
             })}

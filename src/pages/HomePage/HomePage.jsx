@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-
-import { generatePath, Link } from "react-router-dom";
-import { CharacterDetailPage } from "../CharacterPage/CharacterDetailPage";
+import "./_homepage.scss";
 
 export const HomePage = () => {
   
-  return <div>Home Page</div>
+  return <h1>Home Page</h1>
 };

@@ -1,0 +1,28 @@
+.container-planets {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+
+
+
+    .planet-card {
+        display: flex;
+        flex-direction: column;
+        width: 450px;
+        
+        background-color: #f39c12;
+        margin: 10px;
+        border-radius: 20px;
+
+        img {
+            margin: 5px;
+            object-fit: cover;
+            width: 97%;
+            border-radius: 15px;
+            
+
+        }
+
+    }
+}

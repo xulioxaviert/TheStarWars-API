@@ -23,6 +23,7 @@ export const CharacterDetailPage = () => {
   return (
     <>
       {character && (
+        
         <div className="character-card">
           <p>{character.name}</p>
           <img src={character.image} alt={character.name} />
