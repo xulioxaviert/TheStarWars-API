@@ -15,6 +15,8 @@ import { ButtonLogout } from "./shared/components/ButtonLogOut/ButtonLogOut";
 import { CharacterPage } from "./pages/CharacterPage/CharacterPage";
 import { MoviePage } from "./pages/MoviePage/MoviePage";
 import { PlanetPage } from "./pages/PlanetPage/PlanetPage";
+import { CharacterDetailPage } from "./pages/CharacterPage/CharacterDetailPage";
+import { MovieDetailPage } from "./pages/MoviePage/MoviePageDetail";
 
 function App() {
   const [jwt, setJwt] = useState(localStorage.getItem("token"));
@@ -48,33 +50,11 @@ function App() {
               }
             />
             <Route path="/login" element={<LoginPage />} />
-            <Route
-              path="/movies"
-              element={
-                <RequireAuth>
-                  {" "}
-                  <MoviePage />{" "}
-                </RequireAuth>
-              }
-            />
-            <Route
-              path="/characters"
-              element={
-                <RequireAuth>
-                  {" "}
-                  <CharacterPage />{" "}
-                </RequireAuth>
-              }
-            />
-            <Route
-              path="/planets"
-              element={
-                <RequireAuth>
-                  {" "}
-                  <PlanetPage />{" "}
-                </RequireAuth>
-              }
-            />
+            <Route path="/movies" element={ <RequireAuth> <MoviePage /></RequireAuth>  }/>
+            <Route path="/movies/:name" element={ <RequireAuth> <MovieDetailPage /></RequireAuth>  }/>
+            <Route path="/characters" element={ <RequireAuth> <CharacterPage /></RequireAuth>}/>
+            <Route path="/characters/:name" element={<RequireAuth> <CharacterDetailPage /> </RequireAuth>}/>
+            <Route path="/planets" element={ <RequireAuth> <PlanetPage /> </RequireAuth>}/>
             <Route path="/register" element={<RegisterPage />} />
           </Routes>
         </Router>

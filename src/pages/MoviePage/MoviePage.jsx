@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export const MoviePage = () => {
     const [movies, setMovies] = useState([]);
@@ -7,7 +8,7 @@ export const MoviePage = () => {
 
     useEffect(() => {
       axios(url).then((res) => {
-        console.log(res);
+        //console.log(res);
         setMovies(res.data.data.movies);
       });
     }, [url]);
@@ -19,8 +20,10 @@ export const MoviePage = () => {
             movies.map((movie) => {
               return (
                 <div className="movie-card" key={movie.id}>
-                  <img src={movie.poster} alt={movie.name} />
-                  <p> {movie.name}</p>
+                  <Link to={`/movies/${movie.name}`}>
+                    <img src={movie.poster} alt={movie.name} />
+                    <p> {movie.name}</p>
+                  </Link>
                 </div>
               );
             })}

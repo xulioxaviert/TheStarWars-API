@@ -13,7 +13,7 @@ export const LoginForm = () => {
       console.log(res);
       localStorage.setItem("token", res.data);
       setJwt(res.data);
-      navigate("/");
+      navigate("/home");
     });
 
     //console.log(formData);

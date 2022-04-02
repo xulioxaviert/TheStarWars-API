@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
+//import { CharacterDetailPage } from "../CharacterDetailPage/CharacterDetailPage";
 
 export const CharacterPage = () => {
   const [characters, setCharacters] = useState([]);
@@ -7,7 +9,7 @@ export const CharacterPage = () => {
 
   useEffect(() => {
     axios(url).then((res) => {
-      console.log(res);
+      //console.log(res);
       setCharacters(res.data.data.characters);
     });
   }, [url]);
@@ -16,11 +18,23 @@ export const CharacterPage = () => {
     <>
       <div className="container-character">
         {characters &&
-          characters.map((character) => {
+          characters.map((character, index) => {
             return (
-              <div className="characters-card" key={character.id}>
-                <img src={character.image} alt={character.name} />
-                <p> {character.name}</p>
+              <div key={index}>
+                {/* <CharacterDetailPage
+                  key={character.id}
+                  id={character.id}
+                  name={character.name}
+                  origin={character.origin}
+                  role={character.role}
+                  description={character.description}
+                /> */}
+                <div className="characters-card">
+                  <Link to={`/characters/${character.name}`}>
+                    <img src={character.image} alt={character.name} />
+                  </Link>
+                  <p> {character.name}</p>
+                </div>
               </div>
             );
           })}

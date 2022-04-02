@@ -7,7 +7,7 @@ export const PlanetPage = () => {
 
   useEffect(() => {
     axios(url).then((res) => {
-      console.log(res);
+      //console.log(res);
       setPlanets(res.data.data.planets);
     });
   }, [url]);
