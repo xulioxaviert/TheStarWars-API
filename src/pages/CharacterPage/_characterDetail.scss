@@ -1,6 +1,5 @@
 .character-card {
     padding: 0;
-    margin: 50px 0;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -8,6 +7,10 @@
     margin: 0 15%;
     background-color: #f39c12;
     border-radius: 20px;
+
+    .card {
+        width: 100%;
+    }
 
     img {
         width: 90%;
@@ -19,8 +22,26 @@
 
     p {
         text-align: justify;
-        padding: 0px;
+        padding: 10px 5%;
         margin: 5px;
+        line-height: 1.3rem;
+        width: 90%;
+
+
     }
+
+    @media (max-width: 900px) {
+        p {
+            font-size: 12px;
+
+        }
+
+        h4 {
+
+            font-size: 12px;
+        }
+    }
+
+
 
 }

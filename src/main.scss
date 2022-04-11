@@ -12,9 +12,7 @@
 
 .App {
   text-align: center;
-
 }
-
 
 .nav {
   display: flex;
@@ -24,6 +22,24 @@
   height: 80px;
   margin: 0;
   padding: 0;
+
+  @media (max-width: 900px) {
+
+    .nav {
+      margin-left: 5px;
+      height: 50px;
+    }
+
+    a {
+      font-size: 10px;
+
+    }
+
+    button {
+      font-size: 8px;
+      height: 20px;
+    }
+  }
 
   a {
     padding: 8px;
@@ -36,22 +52,22 @@
     border-radius: 5px;
   }
 
-.buttonOut {
-  border-radius: 30px;
-  font-weight: bolder;
-  background-color: rgb(235, 212, 154);
-  margin-right: 50px;
-  font-family: 'Press Start 2P', cursive;
-  height: 30px;
-  padding-right: 10px;
-  padding-left: 10px;
-  cursor: pointer;
-}
+  .buttonOut {
+    border-radius: 30px;
+    font-weight: bolder;
+    background-color: rgb(235, 212, 154);
+    margin-right: 50px;
+    font-family: 'Press Start 2P', cursive;
+    height: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    cursor: pointer;
+  }
 
-.buttonOut:hover{
-  background-color: #f39c12;
-  
-}
+  .buttonOut:hover {
+    background-color: #f39c12;
+
+  }
 
 
 }

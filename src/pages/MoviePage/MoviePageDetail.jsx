@@ -23,15 +23,15 @@ export const MovieDetailPage = () => {
     <>
       {movie && (
         <div className="container-filMakers">
-          <p>{movie.name}</p>
+          <h2>{movie.name}</h2>
           <img src={movie.poster} alt={movie.name} />
           <p>{movie.crawl}</p>
           {movie.filmMakers.map((filmMaker, index) => {
             //console.log(movie);
             return (
               <div key= {index}>
-                <p>Name: {filmMaker.name}</p>
-                <p>Role: {filmMaker.role}</p>
+                <h4>Name: {filmMaker.name}</h4>
+                <h4>Role: {filmMaker.role}</h4>
               </div>
             );
           })}

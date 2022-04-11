@@ -23,19 +23,20 @@ export const CharacterDetailPage = () => {
   return (
     <>
       {character && (
-        
         <div className="character-card">
-          <p>{character.name}</p>
-          <img src={character.image} alt={character.name} />
-          <p>{character.description}</p>
-          {character.family.map((family, index) => {
-            return (
-              <div key= {index}>
-                <p>Name: {family.name}</p>
-                <p>Member: {family.member}</p>
-              </div>
-            );
-          })}
+          <div className="card">
+            <h2>{character.name}</h2>
+            <img src={character.image} alt={character.name} />
+            <p>{character.description}</p>
+            {character.family.map((family, index) => {
+              return (
+                <div key={index}>
+                  <h4>Name: {family.name}</h4>
+                  <h4>Member: {family.member}</h4>
+                </div>
+              );
+            })}
+          </div>
         </div>
       )}
     </>
